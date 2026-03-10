@@ -10,9 +10,17 @@ node_modules/
 !.yarn/sdks
 !.yarn/versions
 
+# Seu gitignore deve ter:
+
+!src/**/*.ts 
+!src/**/*.vue
+
 # Build outputs
 dist/
 build/
+*.d.ts
+*.d.ts.map
+*.js
 *.tsbuildinfo
 tsconfig.tsbuildinfo
 
