@@ -16,4 +16,14 @@ export class Cart{
             this.listproducts.push({ product, quantity });
         }
     }
+
+    getTotalItems(): number {
+    return this.listproducts.reduce((total, item) => total + item.quantity, 0);
+  }
+
+   getFinalPrice(): number {
+    return this.listproducts.reduce((total, item) =>
+      total + item.product.priceWithDiscountAplied() * item.quantity, 0
+    );
+  }
 } 
